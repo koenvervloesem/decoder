@@ -299,6 +299,7 @@ const char* expected_mac_mfg[] = {
     "{\"brand\":\"GENERIC\",\"model\":\"TPMS\",\"model_id\":\"TPMS\",\"type\":\"TIRE\",\"cidc\":false,\"count\":1,\"pres\":2.22708,\"tempc\":31.96,\"tempf\":89.528,\"batt\":51,\"alarm\":false,\"mac\":\"80:ea:ca:dd:ee:ff\"}",
     "{\"brand\":\"GENERIC\",\"model\":\"TPMS\",\"model_id\":\"TPMS\",\"type\":\"TIRE\",\"cidc\":false,\"count\":3,\"pres\":2.61137,\"tempc\":17.06,\"tempf\":62.708,\"batt\":83,\"alarm\":false,\"mac\":\"82:ea:ca:dd:ee:ff\"}",
     "{\"brand\":\"Xiaomi/Amazfit\",\"model\":\"Mi Band/Smart Watch\",\"model_id\":\"MB/SW\",\"type\":\"BODY\",\"acts\":true,\"track\":true,\"act_bpm\":125,\"device\":\"Xiaomi/Amazfit Tracker\",\"mac\":\"aa:bb:cc:dd:ee:ff\"}",
+    "{\"brand\":\"Shelly\",\"model\":\"ShellyBLU Button1\",\"model_id\":\"SBBT-002C\",\"type\":\"BTN\",\"acts\":true,\"cont\":true,\"packet\":148,\"batt\":100,\"press\":1,\"mac\":\"bc:02:6e:aa:bb:cc\"}",
 };
 
 const char* expected_mac_mfgsvcdata[] = {
@@ -890,6 +891,7 @@ const char* test_mac_mfgdata[][3] = {
     {"TPMS", "80:EA:CA:DD:EE:FF", "000180eacaddeefff46503007c0c00003300"},
     {"TPMS", "82:EA:CA:DD:EE:FF", "000182eacaddeeff11fc0300aa0600005300"},
     {"MiBand", "AA:BB:CC:DD:EE:FF", "57010202017dffffffffffffffffffffffffff02aabbccddeeff"},
+    {"SBBT-002C", "BC:02:6E:AA:BB:CC", "a90b0109000b01000accbbaa6e02bc"},
 };
 
 TheengsDecoder::BLE_ID_NUM test_mac_mfgdata_id_num[]{
@@ -908,6 +910,7 @@ TheengsDecoder::BLE_ID_NUM test_mac_mfgdata_id_num[]{
     TheengsDecoder::BLE_ID_NUM::TPMS,
     TheengsDecoder::BLE_ID_NUM::TPMS,
     TheengsDecoder::BLE_ID_NUM::MIBAND,
+    TheengsDecoder::BLE_ID_NUM::SBBT_002C,
 };
 
 // MAC test input [test name] [mac] [manufacturer data] [service data]
